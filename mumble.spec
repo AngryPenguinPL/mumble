@@ -25,7 +25,7 @@ Source7:        %{name}-tmpfiles.conf
 Source100:	mumble.rpmlintrc
 Patch0:		mumble-1.2.4-celt-0.11.1.patch
 Patch1:		0001-use-std-max-instead-of-MAX.patch
-# Patch2:		mumble-1.2.5-fdr-compile-fix.patch
+#Patch2:		mumble-1.2.5-fdr-compile-fix.patch
 BuildRequires:	kde4-macros
 BuildRequires:	protobuf-compiler
 BuildRequires:	qt4-linguist
@@ -205,7 +205,7 @@ This package contains the web scripts for mumble-server.
 %setup -q
 %patch0 -p1 -b .celt11~
 %patch1 -p1 -b .max~
-# %patch2 -p1 -b .compile~
+#patch2 -p1 -b .compile~
 cp -p %{SOURCE4} README.install.urpmi
 
 %build
