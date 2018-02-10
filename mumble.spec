@@ -47,6 +47,7 @@ BuildRequires:	pkgconfig(libssl)
 BuildRequires:	pkgconfig(ogg)
 BuildRequires:	pkgconfig(protobuf)
 BuildRequires:	pkgconfig(speex) >= 1.2
+BuildRequires:	pkgconfig(speexdsp) >= 1.2
 BuildRequires:	pkgconfig(sndfile)
 BuildRequires:	pkgconfig(xevie)
 BuildRequires:	pkgconfig(xi)
