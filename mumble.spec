@@ -205,7 +205,7 @@ This package contains the web scripts for mumble-server.
 %setup -q
 %patch0 -p1 -b .celt11~
 %patch1 -p1 -b .max~
-%patch2 -p1 -b .compile~
+# %patch2 -p1 -b .compile~
 cp -p %{SOURCE4} README.install.urpmi
 
 %build
