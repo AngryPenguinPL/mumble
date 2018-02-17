@@ -32,6 +32,7 @@ BuildRequires:	protobuf-compiler
 BuildRequires:	qt4-linguist
 BuildRequires:	boost-devel
 BuildRequires:	cap-devel
+BuildRequires:	libspeechd-devel
 %if %{with g15}
 BuildRequires:	g15daemon_client-devel
 %endif
