@@ -1,6 +1,6 @@
 --- mumble-1.2.4/src/mumble/AudioInput.cpp.bero	2012-04-22 22:54:13.627406284 +0200
-+++ mumble-1.2.4/src/mumble/AudioInput.cpp	2012-04-22 22:54:37.389406824 +0200
-@@ -47,6 +47,10 @@
++++ mumble-1.2.19/src/mumble/AudioInput.cpp	2012-04-22 22:54:37.389406824 +0200
+@@ -49,6 +49,10 @@
  #include "opus.h"
  #endif
  
