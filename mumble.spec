@@ -55,6 +55,7 @@ BuildRequires:	qt5-devel
 BuildRequires:	qt5-qtbase-devel
 BuildRequires:	pkgconfig(Qt5Svg)
 BuildRequires:	pkgconfig(opus)
+BuildRequires:	qt5-qttranslations
 
 
 
