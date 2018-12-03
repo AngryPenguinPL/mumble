@@ -9,7 +9,7 @@
 Summary:	Low-latency, high-quality voice communication for gamers
 Name:		mumble
 Version:	1.3.0
-Release:	0.dev.03.12.2018
+Release:	0.git20181201
 License:	BSD-like
 Group:		Sound
 Url:		http://mumble.sourceforge.net/
@@ -209,7 +209,7 @@ This package contains the web scripts for mumble-server.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -qn %{name}-master
+%setup -qn %{name}-%{version}.git20181201
 #patch0 -p1 -b .celt11~
 #patch1 -p1 -b .max~
 #patch2 -p1 -b .compile~
