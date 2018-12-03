@@ -47,6 +47,7 @@ BuildRequires:	pkgconfig(libssl)
 BuildRequires:	pkgconfig(ogg)
 BuildRequires:	pkgconfig(protobuf)
 BuildRequires:	pkgconfig(speex) >= 1.2
+BuildRequires:  pkgconfig(speexdsp)
 BuildRequires:	pkgconfig(sndfile)
 BuildRequires:	pkgconfig(xevie)
 BuildRequires:	pkgconfig(xi)
@@ -221,6 +222,7 @@ qmake-qt5 \
   DEFINES*=MUMBLE_VERSION=%{version} \
   DEFINES*=PLUGIN_PATH=%{_libdir}/mumble/plugins \
   CONFIG*=packaged \
+  CONFIG*=no-bundled-speex \
 
 
 %if %{without server}
