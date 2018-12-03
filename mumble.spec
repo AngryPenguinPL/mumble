@@ -57,6 +57,7 @@ BuildRequires:	pkgconfig(Qt5Svg)
 BuildRequires:	pkgconfig(opus)
 BuildRequires:	qt5-qttranslations
 BuildRequires:	qt5-qttools
+BuildRequires:	qt5-linguist-tools
 
 
 
