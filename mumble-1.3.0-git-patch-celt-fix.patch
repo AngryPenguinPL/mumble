@@ -6,13 +6,8 @@ Index: src/mumble/AudioInput.cpp
  #include "NetworkConfig.h"
  #include "VoiceRecorder.h"
  
-+#ifndef CELT_SET_VBR_RATE
 +#define CELT_SET_VBR_RATE CELT_SET_BITRATE
 +
  #ifdef USE_RNNOISE
  extern "C" {
--#include "rnnoise.h"
-+#include "rnnoise.h"  
- }
- #endif
  
