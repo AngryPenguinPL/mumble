@@ -10,4 +10,7 @@ Index: src/mumble/AudioInput.cpp
 +
  #ifdef USE_RNNOISE
  extern "C" {
- 
+ -#include "rnnoise.h"
++#include "rnnoise.h"  
+ }
+ #endif
