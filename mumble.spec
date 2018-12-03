@@ -8,12 +8,12 @@
 
 Summary:	Low-latency, high-quality voice communication for gamers
 Name:		mumble
-Version:	1.2.19
-Release:	1
+Version:	1.3.0
+Release:	0.dev-03.12.2018
 License:	BSD-like
 Group:		Sound
 Url:		http://mumble.sourceforge.net/
-Source0:	http://downloads.sourceforge.net/mumble/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/mumble/%{name}-%{version}.zip
 # conf files courtesy of debian package
 Source1:	%{name}-server.ini
 Source2:	%{name}-server-web.conf
@@ -26,15 +26,15 @@ Source100:	mumble.rpmlintrc
 Patch0:		mumble-1.2.4-celt-0.11.1.patch
 Patch1:		0001-use-std-max-instead-of-MAX.patch
 Patch2:		mumble-1.2.5-fdr-compile-fix.patch
-BuildRequires:	kde4-macros
+#BuildRequires:	kde4-macros
 BuildRequires:	protobuf-compiler
-BuildRequires:	qt4-linguist
+#BuildRequires:	qt4-linguist
 BuildRequires:	boost-devel
 BuildRequires:	cap-devel
 %if %{with g15}
 BuildRequires:	g15daemon_client-devel
 %endif
-BuildRequires:	qt4-devel
+#BuildRequires:	qt4-devel
 %if %{with speechd}
 BuildRequires:	speech-dispatcher-devel
 %endif
@@ -50,6 +50,12 @@ BuildRequires:	pkgconfig(speex) >= 1.2
 BuildRequires:	pkgconfig(sndfile)
 BuildRequires:	pkgconfig(xevie)
 BuildRequires:	pkgconfig(xi)
+BuildRequires:	qt5-devel
+BuildRequires:	qt5-qtbase-devel
+BuildRequires:	pkgconfig(Qt5Svg)
+
+
+
 Requires:	qt4-database-plugin-sqlite
 Requires:	%{name}-plugins = %{EVRD}
 Suggests:	%{name}-protocol
@@ -208,7 +214,7 @@ This package contains the web scripts for mumble-server.
 cp -p %{SOURCE4} README.install.urpmi
 
 %build
-%qmake_qt4 main.pro \
+%qmake-qt5 main.pro \
 %if %{without server}
 	CONFIG+=no-server \
 %endif
