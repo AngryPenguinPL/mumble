@@ -224,6 +224,7 @@ qmake-qt5 \
   DEFINES*=PLUGIN_PATH=%{_libdir}/mumble/plugins \
   CONFIG*=packaged \
   CONFIG*=no-bundled-speex \
+  CONFIG*=no-bundled-opus \
 
 
 %if %{without server}
