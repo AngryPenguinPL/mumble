@@ -1,0 +1,18 @@
+Index: src/mumble/AudioInput.cpp
+===================================================================
+--- src/mumble/AudioInput.cpp
++++ src/mumble/AudioInput.cpp	2018-12-03 20:49:02.699823447 +0100
+@@ -20,9 +20,12 @@
+ #include "NetworkConfig.h"
+ #include "VoiceRecorder.h"
+ 
++#ifndef CELT_SET_VBR_RATE
++#define CELT_SET_VBR_RATE CELT_SET_BITRATE
++
+ #ifdef USE_RNNOISE
+ extern "C" {
+-#include "rnnoise.h"
++#include "rnnoise.h"  
+ }
+ #endif
+ 
