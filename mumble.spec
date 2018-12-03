@@ -13,7 +13,7 @@ Release:	0.dev-03.12.2018
 License:	BSD-like
 Group:		Sound
 Url:		http://mumble.sourceforge.net/
-Source0:	http://downloads.sourceforge.net/mumble/%{name}-%{version}.zip
+Source0:	%{name}-master-03.12.2018.zip
 # conf files courtesy of debian package
 Source1:	%{name}-server.ini
 Source2:	%{name}-server-web.conf
@@ -207,7 +207,7 @@ This package contains the web scripts for mumble-server.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q
+%setup -qn %{name}-master
 %patch0 -p1 -b .celt11~
 %patch1 -p1 -b .max~
 %patch2 -p1 -b .compile~
