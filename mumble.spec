@@ -247,7 +247,7 @@ qmake-qt5 \
 	CONFIG+=no-update \
 	DEFINES+=PLUGIN_PATH=%{_libdir}/%{name} \
 	DEFINES+=DEFAULT_SOUNDSYSTEM=PulseAudio \
-	CONFIG*=no-crash-report \
+
   -recursive
 #
 make %{?_smp_mflags}
