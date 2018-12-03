@@ -13,7 +13,7 @@ Release:	0.git20181201
 License:	BSD-like
 Group:		Sound
 Url:		http://mumble.sourceforge.net/
-Source0:	%{name}-master-03.12.2018.zip
+Source0:	%{name}-%{version}.git20181201.tar.gz
 # conf files courtesy of debian package
 Source1:	%{name}-server.ini
 Source2:	%{name}-server-web.conf
