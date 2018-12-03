@@ -214,7 +214,15 @@ This package contains the web scripts for mumble-server.
 #cp -p %{SOURCE4} README.install.urpmi
 
 %build
-%qmake-qt5 main.pro \
+qmake-qt5 \
+  QMAKE_CFLAGS_RELEASE="%{optflags} -Wall -fno-strict-aliasing" \
+  QMAKE_CXXFLAGS_RELEASE="%{optflags} -Wall -fno-strict-aliasing" \
+  DEFINES*=NO_UPDATE_CHECK \
+  DEFINES*=MUMBLE_VERSION=%{version} \
+  DEFINES*=PLUGIN_PATH=%{_libdir}/mumble/plugins \
+  CONFIG*=packaged \
+
+
 %if %{without server}
 	CONFIG+=no-server \
 %endif
