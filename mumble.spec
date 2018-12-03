@@ -246,9 +246,11 @@ qmake-qt5 \
 	CONFIG+=no-embed-qt-translations \
 	CONFIG+=no-update \
 	DEFINES+=PLUGIN_PATH=%{_libdir}/%{name} \
-	DEFINES+=DEFAULT_SOUNDSYSTEM=PulseAudio
-
-%make -j2
+	DEFINES+=DEFAULT_SOUNDSYSTEM=PulseAudio \
+	CONFIG*=no-crash-report \
+  -recursive
+#
+make %{?_smp_mflags}
 
 %install
 %if %{with client}
