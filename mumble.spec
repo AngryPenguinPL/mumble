@@ -248,7 +248,7 @@ qmake-qt5 \
 	CONFIG+=no-g15 \
 %endif
 	CONFIG+=no-bundled-speex \
-	CONFIG+=no-bundled-celt \
+	#CONFIG+=no-bundled-celt \
 	CONFIG+=no-embed-qt-translations \
 	CONFIG+=no-update \
 	DEFINES+=PLUGIN_PATH=%{_libdir}/%{name} \
